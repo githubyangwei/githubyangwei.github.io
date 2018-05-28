@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>魔性Ztree</title>
+</head>
+<link rel="stylesheet" href="../resource/plug/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../resource/plug/zTree/css/zTreeStyle/zTreeStyle.css">
+<link rel="stylesheet" href="../actionSource/source/demonZtree/fix.css">
+<body>
+<div class="container">
+
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="jumbotron">
+                <h1>
+                    魔性Ztree!
+                </h1>
+                <p>
+                    分栏管理数据的树状数据可视化处理
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-large" href="index.html">想看更多</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row clearfix">
+        <div class="col-md-3 column">
+            <h3>基本示例</h3>
+            <ul id="treeDemo" class="ztree demonZtree"></ul>
+
+        </div>
+
+        <div class="col-md-9 column">
+            <div class="alert alert-primary">
+                <code>代码</br>
+                    <pre id="sps">
+
+            </pre>
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../resource/jquery/jquery.min.js"></script>
+<script src="../resource/plug/zTree/js/jquery.ztree.all.js"></script>
+<script id="showMorejs" type="text/javascript">
+    $('#sps').html($('#showMorejs').html())
+
+    var baseData = {
+        "listChild": [{
+            "childClasszId": "40288bd863a4a0180163a627ab170002",
+            "childName": "新建谱系(2)",
+            "childId": "40288bd863a4a0180163a627bc010004",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 1
+        }, {
+            "childClasszId": "40288bec63429f9a016342bc0d7a000b",
+            "childName": "祁东太和堂王氏培庭公支世系行传",
+            "childId": "40288bec6377ab88016377b05f9f0009",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 1
+        }, {
+            "childClasszId": "40288bd863a4a0180163a627ab170002",
+            "childName": "新建谱系(3)",
+            "childId": "40288bd863a4a0180163a627f6a40009",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 2
+        }, {
+            "childClasszId": "40288bec63429f9a016342bc0d7a000b",
+            "childName": "廷册",
+            "childId": "40288bec6377ab88016377afa0f70005",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 2
+        }, {
+            "childClasszId": "40288bd863a4a0180163a627ab170002",
+            "childName": "新建谱系(4)",
+            "childId": "40288bd863a4a0180163a6280403000b",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 3
+        }, {
+            "childClasszId": "40288bec63429f9a016342bc0d7a000b",
+            "childName": "祁东太和堂王氏思爵公支世系行传",
+            "childId": "40288bec6377ab88016377b22459000d",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 3
+        }, {
+            "childClasszId": "40288bec63429f9a016342bc0d7a000b",
+            "childName": "新建谱系",
+            "childId": "40288bd86385cf0b016386a189bc001c",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 4
+        }, {
+            "childClasszId": "40288bec63429f9a016342bc0d7a000b",
+            "childName": "新建谱系(1)",
+            "childId": "40288bd86385cf0b016386fcc62006ff",
+            "childProjectId": "40288bec63429f9a016342bc0d600005",
+            "childClassSort": 5
+        }],
+        "listClassz": [{
+            "classzId": "40288bec63429f9a016342bc0d7a000b",
+            "classzName": "未分类",
+            "classzSort": 1,
+            "classzType": "0",
+            "projectId": "40288bec63429f9a016342bc0d600005",
+            "classzDefaultOr": "1",
+            "createBy": "bp001haha",
+            "createDate": "2018-05-09 10:30:10",
+            "updateBy": null,
+            "updateDate": null,
+            "delFlag": 0
+        }, {
+            "classzId": "40288bd863a4a0180163a627ab170002",
+            "classzName": "新建谱系分类",
+            "classzSort": 2,
+            "classzType": "0",
+            "projectId": "40288bec63429f9a016342bc0d600005",
+            "classzDefaultOr": null,
+            "createBy": "bp001haha",
+            "createDate": "2018-05-28 17:50:07",
+            "updateBy": null,
+            "updateDate": null,
+            "delFlag": 0
+        }]
+    };
+
+    var treeJson=[];
+
+    var setting = {
+        edit: {
+            enable: true,
+            showRemoveBtn: false,
+            showRenameBtn: true
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeDrag: beforeDrag,
+            beforeDrop: beforeDrop,
+            onDblClick: zTreeOnDblClick,
+            onClick: zTreeOnClick,
+            onDragMove: zTreeOnDragMove,
+            beforeRename: zTreeBeforeEditName
+        }
+    };
+
+    $.each(baseData.listClassz,function (a,b) {
+        b.type="dir";
+        b.open=true;
+        b.id=b.classzId;
+        b.name=b.classzName;
+        treeJson.push(b);
+    });
+
+    $.each(baseData.listChild,function (a,b) {
+        b.drop=false;
+        b.type="source";
+        b.id=b.childId;
+        b.name=b.childName;
+        b.pId=b.childClasszId;
+        treeJson.push(b);
+    });
+
+    function beforeDrag(treeId, treeNodes) {
+        for (var i = 0, l = treeNodes.length; i < l; i++) {
+            if (treeNodes[i].drag === false) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function beforeDrop(treeId, treeNodes, targetNode, moveType) {
+        console.log(treeId, treeNodes, targetNode, moveType)
+        if(treeNodes[0].type=='source'){
+            if($.tool.isEmpty(targetNode)){
+                alert('资源不可拖动到这里！')
+                return false;
+            }else{
+                if(targetNode.type=='source'){
+                    if(moveType=='inner'){
+                        alert('资源不可拖动到这里！')
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }else{
+                    if(moveType=='inner'){
+                        return true;
+                    }else{
+                        alert('资源不可拖动到这里！')
+                        return false;
+                    }
+                }
+            }
+        }else{
+            if(moveType=='inner'){
+                alert('文件夹不可拖动到这里！')
+                return false;
+            }else{
+                if(targetNode.type=='source'){
+                    alert('文件夹不可拖动到这里！')
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        }
+
+
+        return targetNode ? targetNode.drop !== false : true;
+    }
+
+    function setCheck() {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+            isCopy = $("#copy").attr("checked"),
+            isMove = $("#move").attr("checked"),
+            prev = $("#prev").attr("checked"),
+            inner = $("#inner").attr("checked"),
+            next = $("#next").attr("checked");
+        zTree.setting.edit.drag.isCopy = isCopy;
+        zTree.setting.edit.drag.isMove = isMove;
+        showCode(1, ['setting.edit.drag.isCopy = ' + isCopy, 'setting.edit.drag.isMove = ' + isMove]);
+
+        zTree.setting.edit.drag.prev = prev;
+        zTree.setting.edit.drag.inner = inner;
+        zTree.setting.edit.drag.next = next;
+        showCode(2, ['setting.edit.drag.prev = ' + prev, 'setting.edit.drag.inner = ' + inner, 'setting.edit.drag.next = ' + next]);
+    }
+
+    function showCode(id, str) {
+        var code = $("#code" + id);
+        code.empty();
+        for (var i = 0, l = str.length; i < l; i++) {
+            code.append("<li>" + str[i] + "</li>");
+        }
+    }
+
+    function zTreeOnDblClick(event, treeId, treeNode) {
+        console.log(event, treeId, treeNode)
+        console.log(222222222222)
+    };
+
+    function zTreeOnDragMove(event, treeId, treeNode) {
+
+        console.log(event, treeId, treeNode)
+        console.log(222222222222)
+    };
+
+    function zTreeOnClick(event, treeId, treeNode) {
+
+        console.log(event, treeId, treeNode)
+        console.log(111111)
+
+    };
+
+    function zTreeBeforeEditName(treeId, treeNode) {
+        var a = 2
+        return !treeNode.isParent;
+    }
+
+    $.fn.zTree.init($("#treeDemo"), setting, treeJson);
+
+</script>
+</html>
