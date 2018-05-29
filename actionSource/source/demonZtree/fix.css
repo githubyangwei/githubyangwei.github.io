@@ -1,3 +1,8 @@
+.ztree li span.button{
+    background-image: none;
+}
+
+
 .demonZtree.ztree{
     position: relative;
     margin: 0 10px;
@@ -69,6 +74,29 @@
     width: 26px;
     height: 26px;
 }
+.demonZtree.ztree li span.button.pageMore.ico_docu{
+    background-image: url("img/pageMore.png");
+    background-size: 18px 18px;
+    background-position:2px 2px;
+    width: 26px;
+    height: 26px;
+}
+.demonZtree.ztree li span.button.pageSingle.ico_docu{
+    background-image: url("img/pageSingle.png");
+    background-size: 18px 18px;
+    background-position:2px 2px;
+    width: 26px;
+    height: 26px;
+}
+.demonZtree.ztree li span.button.bookSourse.ico_docu{
+    background-image: url("img/bookSource.png");
+    background-size: 18px 18px;
+    background-position:2px 2px;
+    width: 26px;
+    height: 26px;
+}
+
+
 .demonZtree.ztree li a.curSelectedNode{
     background-color: #f0ddcf;
     border: none;
