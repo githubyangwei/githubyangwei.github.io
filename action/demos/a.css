@@ -2,23 +2,27 @@
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
+
 html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
     background: #fafafa;
 }
-.setBodys{
+
+.setBodys {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
+
 @media screen and (min-width: 1080px) {
-    .setBodys{
+    .setBodys {
         width: 1080px;
         top: 2%;
         bottom: 2%;
@@ -40,24 +44,25 @@ html, body {
     overflow: auto;
     overflow-x: hidden;
     z-index: 3;
-    transition: width .8s,height .8s;
-    -moz-transition: width .8s,height .8s;
-    -webkit-transition: width .8s,height .8s;
-    -o-transition: width .8s,height .8s;
+    transition: width .8s, height .8s;
+    -moz-transition: width .8s, height .8s;
+    -webkit-transition: width .8s, height .8s;
+    -o-transition: width .8s, height .8s;
 }
-.showLeft *{
-    transition: width .8s,height .8s;
-    -moz-transition: width .8s,height .8s;
-    -webkit-transition: width .8s,height .8s;
-    -o-transition: width .8s,height .8s;
+
+.showLeft * {
+    transition: width .8s, height .8s;
+    -moz-transition: width .8s, height .8s;
+    -webkit-transition: width .8s, height .8s;
+    -o-transition: width .8s, height .8s;
 }
 
 .content {
-    position: absolute;
-    height: 100%;
+    position: relative;
+    height: 90%;
     z-index: 2;
     box-sizing: border-box;
-    padding: 50px 20px 0 0;
+    padding: 0px 20px 0 0;
     top: 0;
     margin-left: 100px;
     left: 0;
@@ -98,12 +103,13 @@ html, body {
 
 }
 
-.showMoreLoads span{
-    opacity:0;
+.showMoreLoads span {
+    opacity: 0;
     position: relative;
-    top:-10px;
+    top: -10px;
     font-size: 16px;
 }
+
 .iconBlocks i {
     font-size: 36px;
     display: block;
@@ -144,10 +150,12 @@ html, body {
 .color7 {
     background: #999999;
 }
+
 .color8 {
     background: #9999CC;
 }
-.showListBks8{
+
+.showListBks8 {
     display: none;
 }
 
@@ -208,7 +216,7 @@ html, body {
     font-size: 14px;
     color: #999;
     white-space: nowrap;
-
+    text-align: center;
 }
 
 .admores {
@@ -243,21 +251,22 @@ html, body {
     top: 0;
     left: 0
 }
-.realContsos{
+
+.realContsos {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding-top: 80px;
     box-sizing: border-box;
 }
-.showTconts{
+
+.showTconts {
     width: 100%;
-    height:98%;
+    height: 98%;
     box-sizing: border-box;
 }
-
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -282,38 +291,46 @@ html, body {
     height: 100%;
     z-index: 6;
 }
-.openBlocks.showLeft span{
+
+.openBlocks.showLeft span {
     opacity: 1;
     color: #fff;
 }
-.openBlocks.showLeft .showListBks1,.openBlocks.showLeft .showListBks4{
+
+.openBlocks.showLeft .showListBks1, .openBlocks.showLeft .showListBks4 {
     width: 100%;
     height: 20%;
     clear: both;
 }
-.openBlocks.showLeft .showMoreLoads{
-    top:40%;
+
+.openBlocks.showLeft .showMoreLoads {
+    top: 40%;
 }
-.openBlocks.showLeft .showListBks2,.openBlocks.showLeft .showListBks3,.openBlocks.showLeft .showListBks5,.openBlocks.showLeft .showListBks6{
+
+.openBlocks.showLeft .showListBks2, .openBlocks.showLeft .showListBks3, .openBlocks.showLeft .showListBks5, .openBlocks.showLeft .showListBks6 {
     width: 50%;
     height: 20%;
     float: left;
 }
-.openBlocks.showLeft .showListBks7,.openBlocks.showLeft .showListBks8{
+
+.openBlocks.showLeft .showListBks7, .openBlocks.showLeft .showListBks8 {
     width: 100%;
     height: 10%;
     clear: both;
     display: block;
 }
-.openBlocks.showLeft .showListBks7 .showMoreLoads,.openBlocks.showLeft .showListBks8 .showMoreLoads{
+
+.openBlocks.showLeft .showListBks7 .showMoreLoads, .openBlocks.showLeft .showListBks8 .showMoreLoads {
     position: static;
 }
-.openBlocks.showLeft .showListBks7 .iconBlocks i,.openBlocks.showLeft .showListBks8 .iconBlocks i{
+
+.openBlocks.showLeft .showListBks7 .iconBlocks i, .openBlocks.showLeft .showListBks8 .iconBlocks i {
     display: inline-block;
     font-size: 20px;
-    top:0;
+    top: 0;
     margin-right: 20px;
 }
-.openBlocks.showLeft .showListBks7 span,.openBlocks.showLeft .showListBks8 span{
-    top:0;
+
+.openBlocks.showLeft .showListBks7 span, .openBlocks.showLeft .showListBks8 span {
+    top: 0;
 }
