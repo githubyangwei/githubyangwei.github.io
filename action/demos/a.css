@@ -118,11 +118,11 @@ html, body {
 }
 
 .color1 {
-    background: #428e3f;
+    background: #66ccbf;
 }
 
 .color2 {
-    background: #c7ba6a;
+    background: #f1cf01;
 }
 
 .color3 {
@@ -134,11 +134,11 @@ html, body {
 }
 
 .color5 {
-    background: #330066;
+    background: #8740ce;
 }
 
 .color6 {
-    background: #FFCC33;
+    background: #30b4d4;
 }
 
 .color7 {
@@ -152,10 +152,10 @@ html, body {
 }
 
 .showList.select {
-    background: -webkit-linear-gradient(#5EFCE8, #736EFE); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#5EFCE8, #736EFE); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#5EFCE8, #736EFE); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#5EFCE8, #736EFE); /* 标准的语法 */
+    background: -webkit-linear-gradient(#9306a5, #736EFE); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#9306a5, #736EFE); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#9306a5, #736EFE); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#9306a5, #736EFE); /* 标准的语法 */
 
     box-shadow: -1px 0px 10px #d2d2d2, 1px 0px 10px #d2d2d2, 0px 1px 10px #d2d2d2;
 
