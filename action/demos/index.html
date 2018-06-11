@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="onesiconfont/iconfont.css">
+</head>
+<body>
+<div class="setBodys">
+
+    <div class="showLeft">
+        <a target="showTconts" href="task.html?title=1" class="showList showListBks1 select" title="添加任务">
+            <div class="iconBlocks color1">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe9e9;</i><span>添加任务</span></div>
+            </div>
+        </a>
+        <a target="showTconts"  href="task.html?title=2" class="showList showListBks2" title="账户充值">
+            <div class="iconBlocks color2">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe604;</i><span>账户充值</span></div>
+            </div>
+        </a>
+        <a target="showTconts" href="task.html?title=3" class="showList showListBks3" title="我的任务">
+            <div class="iconBlocks color3">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe625;</i><span>我的任务</span></div>
+            </div>
+        </a>
+        <a target="showTconts" href="task.html?title=4" class="showList showListBks4" title="内部转账">
+            <div class="iconBlocks color4">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe63f;</i><span>内部转账</span></div>
+            </div>
+        </a>
+        <a target="showTconts" href="task.html?title=5" target="showTconts" class="showList showListBks5" title="充值卡管理">
+            <div class="iconBlocks color5">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe648;</i><span>充值卡管理</span></div>
+            </div>
+        </a>
+        <a target="showTconts" href="task.html?title=6" class="showList showListBks6" title="修改密码">
+            <div class="iconBlocks color6">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe603;</i><span>修改密码</span></div>
+            </div>
+        </a>
+        <a target="showTconts" href="task.html" class="showList showListBks7" title="注销退出">
+            <div class="iconBlocks color7">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe631;</i><span>注销退出</span></div>
+            </div>
+        </a>
+
+        <div class="showList showListBks8" title="返回">
+            <div class="iconBlocks color8 showHideBtns">
+                <div class="showMoreLoads"><i class="onesiconfont">&#xe722;</i><span>返回</span></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="rightOuter">
+        <div class="ToRightBox showHideBtns">
+            <div class="shoiwss">点击查看全部</div>
+        </div>
+    </div>
+    <div class="Ttiels" id="Ttiels">
+        添加任务
+    </div>
+    <div class="content">
+        <div class="RealContent">
+            <div class="userConts">
+                欢迎您，<span style="color: #33CCFF">123485321</span> （可用积分：<span style="color: #ff0000">10</span>）
+            </div>
+            <div class="admores">
+                <h2>公告:</h2>
+                <div id="gundongw" class="moveAdds"><p id="gundong" class="moveAddsOds">本平台仅供娱乐，如用于非法行为，责任由个人承担！！</p>
+                </div>
+            </div>
+            <div class="realContsos">
+                <iframe src="task.html" frameborder="0" class="showTconts" id="showTconts" name="showTconts"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+    var varss = 0;
+    var maxw = $('#gundong').width() + 60;
+    var divw = $('#gundongw').width() + 10;
+
+    setInterval(function () {
+        varss = varss + 2;
+        $('#gundong').css('left', -varss);
+        if (varss > maxw) {
+            varss = -divw;
+        }
+    }, 30);
+
+    $('.showHideBtns').click(function () {
+        var $Obj=$('.showLeft');
+        if($Obj.hasClass('openBlocks')){
+            $Obj.removeClass('openBlocks')
+        }else{
+            $Obj.addClass('openBlocks')
+        }
+    });
+
+    $('.showList').click(function () {
+        var getrClass=$(this).hasClass('showListBks8');
+        var $Obj=$('.showLeft');
+        if(!getrClass){
+            $(this).addClass('select').siblings().removeClass('select');
+            $Obj.removeClass('openBlocks')
+        }
+    })
+
+</script>
+</html>

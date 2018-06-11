@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fafafa;
+}
+.setBodys{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (min-width: 1080px) {
+    .setBodys{
+        width: 1080px;
+        top: 2%;
+        bottom: 2%;
+        height: 96%;
+        margin: 0 auto;
+        border: 1px solid #cecece;
+        border-radius: 6px;
+    }
+}
+
+.showLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    background: #fafafa;
+    height: 100%;
+    box-shadow: -1px 0px 10px #d2d2d2, 1px 0px 10px #d2d2d2, 0px 1px 10px #d2d2d2;
+    overflow: auto;
+    overflow-x: hidden;
+    z-index: 3;
+    transition: width .8s,height .8s;
+    -moz-transition: width .8s,height .8s;
+    -webkit-transition: width .8s,height .8s;
+    -o-transition: width .8s,height .8s;
+}
+.showLeft *{
+    transition: width .8s,height .8s;
+    -moz-transition: width .8s,height .8s;
+    -webkit-transition: width .8s,height .8s;
+    -o-transition: width .8s,height .8s;
+}
+
+.content {
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 50px 20px 0 0;
+    top: 0;
+    margin-left: 100px;
+    left: 0;
+}
+
+.RealContent {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.showList {
+    width: 80px;
+    margin: 0 auto;
+    height: 14%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.iconBlocks {
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.showMoreLoads {
+    height: 100%;
+    position: relative;
+    top: 50%;
+
+}
+
+.showMoreLoads span{
+    opacity:0;
+    position: relative;
+    top:-10px;
+    font-size: 16px;
+}
+.iconBlocks i {
+    font-size: 36px;
+    display: block;
+    text-align: center;
+    height: 38px;
+    line-height: 40px;
+    position: relative;
+    font-weight: bold;
+    top: -19px;
+    color: #fff;
+    opacity: .9;
+}
+
+.color1 {
+    background: #428e3f;
+}
+
+.color2 {
+    background: #c7ba6a;
+}
+
+.color3 {
+    background: #9966FF;
+}
+
+.color4 {
+    background: #3399FF;
+}
+
+.color5 {
+    background: #330066;
+}
+
+.color6 {
+    background: #FFCC33;
+}
+
+.color7 {
+    background: #999999;
+}
+.color8 {
+    background: #9999CC;
+}
+.showListBks8{
+    display: none;
+}
+
+.showList.select {
+    background: -webkit-linear-gradient(#5EFCE8, #736EFE); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#5EFCE8, #736EFE); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#5EFCE8, #736EFE); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#5EFCE8, #736EFE); /* 标准的语法 */
+
+    box-shadow: -1px 0px 10px #d2d2d2, 1px 0px 10px #d2d2d2, 0px 1px 10px #d2d2d2;
+
+}
+
+.rightOuter {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    z-index: 1;
+}
+
+.ToRightBox {
+    width: 20px;
+    height: 150px;
+    background-color: #fafafa;
+    border-top: 50px solid #fafafa;
+    border-right: 20px solid #fafafa;
+    border-bottom: 50px solid #fafafa;
+    border-left: 20px solid rgba(0, 0, 0, .1);
+    position: relative;
+    top: -125px;
+}
+
+.shoiwss {
+    position: relative;
+    left: -16px;
+    font-size: 12px;
+    color: #666;
+    top: 20px;
+}
+
+.Ttiels {
+    margin-left: 80px;
+    background: #3399FF;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+}
+
+.userConts {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+
+}
+
+.admores {
+    height: 40px;
+    position: relative;
+    line-height: 40px;
+}
+
+.moveAdds {
+    margin-left: 60px;
+    padding-top: 4px;
+    position: absolute;
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+    top: 0;
+}
+
+.admores h2 {
+    background: #fafafa;
+    color: #666;
+    position: relative;
+    z-index: 5;
+    width: 59px;
+}
+
+.moveAddsOds {
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 0
+}
+.realContsos{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+.showTconts{
+    width: 100%;
+    height:98%;
+    box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+    min-height: 25px;
+    min-width: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+    border: 1px solid #efefef;
+}
+
+.openBlocks.showLeft {
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+.openBlocks.showLeft span{
+    opacity: 1;
+    color: #fff;
+}
+.openBlocks.showLeft .showListBks1,.openBlocks.showLeft .showListBks4{
+    width: 100%;
+    height: 20%;
+    clear: both;
+}
+.openBlocks.showLeft .showMoreLoads{
+    top:40%;
+}
+.openBlocks.showLeft .showListBks2,.openBlocks.showLeft .showListBks3,.openBlocks.showLeft .showListBks5,.openBlocks.showLeft .showListBks6{
+    width: 50%;
+    height: 20%;
+    float: left;
+}
+.openBlocks.showLeft .showListBks7,.openBlocks.showLeft .showListBks8{
+    width: 100%;
+    height: 10%;
+    clear: both;
+    display: block;
+}
+.openBlocks.showLeft .showListBks7 .showMoreLoads,.openBlocks.showLeft .showListBks8 .showMoreLoads{
+    position: static;
+}
+.openBlocks.showLeft .showListBks7 .iconBlocks i,.openBlocks.showLeft .showListBks8 .iconBlocks i{
+    display: inline-block;
+    font-size: 20px;
+    top:0;
+    margin-right: 20px;
+}
+.openBlocks.showLeft .showListBks7 span,.openBlocks.showLeft .showListBks8 span{
+    top:0;
+}
